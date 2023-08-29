@@ -39,6 +39,3 @@ For starting project localy, simply copy repository.
 * For client:
     * `npm install` in frontend folder to install all dependensies
     * `npm run dev` in frontend folder to start client (server will start on port 5173)
-
-
-
