@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import styles from './Logo.module.scss';
 import logo from '../../assets/images/logo.png';
 
@@ -7,7 +8,7 @@ type LogoProps = {
 
 export const Logo: React.FC<LogoProps> = ({ isHeader }) => {
 	return (
-		<a className={styles.logo} href='#'>
+		<NavLink className={styles.logo} to='/admin'>
 			<div className={styles.logo__imgWrapper}>
 				<img
 					className={styles.logo__img}
@@ -26,6 +27,6 @@ export const Logo: React.FC<LogoProps> = ({ isHeader }) => {
 			>
 				<p className={styles.logo__text}>Organick</p>
 			</div>
-		</a>
+		</NavLink>
 	);
 };
