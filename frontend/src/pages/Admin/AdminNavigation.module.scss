@@ -1,0 +1,15 @@
+@import '../../assets/styles/module.scss';
+
+.adminNavigation {
+    &__container {
+        @include container
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+        padding-block: 2rem;
+    }
+}

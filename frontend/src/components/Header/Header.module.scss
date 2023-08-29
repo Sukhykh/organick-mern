@@ -1,0 +1,83 @@
+@import '../../assets/styles/module.scss';
+
+.header {
+
+    &__container {
+        @include containerHeader;
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-block: 6.9rem;
+        gap: 3rem;
+
+        @media screen and (max-width: $breakpoint110) {
+            padding-block: 3rem;
+        }
+
+        @media screen and (max-width: $breakpoint55) {
+            gap: 1rem;
+        }
+    }
+
+    &__menuWrapper {
+        display: flex;
+        align-items: center;
+        gap: dinamic1920(150px);
+
+        @media screen and (max-width: $breakpoint170) {
+            gap: 5rem;
+        }
+
+        @media screen and (max-width: $breakpoint120) {
+            gap: 3rem;
+        }
+
+        @media screen and (max-width: $breakpoint120) {
+            justify-content: space-between;
+            width: 100%;
+        }
+    }
+
+    &__btnWrapper {
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+
+        @media screen and (max-width: $breakpoint55) {
+            gap: 1rem;
+        }
+    }
+
+    &__top {
+        position: fixed;
+        bottom: 5rem;
+        right: 5rem;
+        z-index: 3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 6rem;
+        height: 6rem;
+        border-radius: 50%;
+        border: 0.1rem solid $greenAccent;
+        background-color: $greenAccent;
+        @include singleFont($roboto, 700, 2rem, 120%);
+        color: $white;
+        text-transform: uppercase;
+        transition: all 0.3s linear;
+
+        &:hover,
+        &:focus {
+            border-color: $titleColor;
+            background-color: $yellowAccent;
+            box-shadow: 0 0 0.5rem 0.5rem $white;
+        }
+
+        &:active {
+            opacity: 0.7;
+        }
+    }
+}
